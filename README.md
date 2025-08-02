@@ -54,7 +54,9 @@ TEST/
 └── examples/           # サンプルプログラム
     ├── simple-cli/     # CLIツールサンプル
     ├── json-parser/    # JSON処理サンプル
-    └── middleware-demo/ # ミドルウェア使用例
+    ├── middleware-demo/ # ミドルウェア使用例
+    ├── arithmetic-operations/ # 四則演算サンプル
+    └── output-practice/ # 出力練習サンプル
 ```
 
 ## 🛠 開発環境
@@ -90,6 +92,20 @@ cd examples/middleware-demo
 go run main.go
 # 認証が必要なエンドポイントをテスト
 curl -H "Authorization: Bearer demo-token" http://localhost:8080/api/v1/users
+```
+
+### 5. 四則演算サンプル (`examples/arithmetic-operations/`)
+```bash
+cd examples/arithmetic-operations
+go run main.go add 10 5
+go run main.go all 12 4
+```
+
+### 6. 出力練習サンプル (`examples/output-practice/`)
+```bash
+cd examples/output-practice
+go run main.go basic
+go run main.go all
 ```
 
 ## 📄 ライセンス

@@ -166,6 +166,29 @@ go run main.go
 # ブラウザで http://localhost:8080 にアクセス
 ```
 
+### Goコマンドが使用できない場合のサンプル実行
+
+Goがローカルにインストールされていない場合、Dockerを使用してサンプルプログラムを実行できます：
+
+```bash
+# プロジェクトルートディレクトリから実行
+
+# 四則演算サンプル
+docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/arithmetic-operations/main.go add 10 5
+
+# 出力練習サンプル
+docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/output-practice/main.go basic
+
+# CLIツールサンプル
+docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/simple-cli/main.go hello テスト
+
+# JSON処理サンプル
+docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/json-parser/main.go
+
+# ミドルウェアデモ（ポート8080でサーバーを起動）
+docker run --rm -v $(pwd):/app -w /app -p 8080:8080 golang:1.21-alpine go run examples/middleware-demo/main.go
+```
+
 ### コードの変更とテスト
 
 1. `main.go` を編集
