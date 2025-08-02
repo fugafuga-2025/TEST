@@ -25,6 +25,7 @@ docker-compose up --build
 ## 📚 ドキュメント
 
 - [環境構築マニュアル](docs/setup-manual.md) - 詳細なセットアップ手順
+- [サンドボックスの解説](docs/sandbox.md) - 簡単なプログラムのサンドボックス
 - [API仕様書](docs/api-reference.md) - REST APIの詳細仕様
 - [サンプルコード解説](docs/code-explanation.md) - コードの詳細解説
 
@@ -54,9 +55,8 @@ TEST/
 └── examples/           # サンプルプログラム
     ├── simple-cli/     # CLIツールサンプル
     ├── json-parser/    # JSON処理サンプル
-    ├── middleware-demo/ # ミドルウェア使用例
-    ├── arithmetic-operations/ # 四則演算サンプル
-    └── output-practice/ # 出力練習サンプル
+    └── middleware-demo/ # ミドルウェア使用例
+    └── test/           # サンドボックス
 ```
 
 ## 🛠 開発環境
@@ -92,20 +92,6 @@ cd examples/middleware-demo
 go run main.go
 # 認証が必要なエンドポイントをテスト
 curl -H "Authorization: Bearer demo-token" http://localhost:8080/api/v1/users
-```
-
-### 5. 四則演算サンプル (`examples/arithmetic-operations/`)
-```bash
-cd examples/arithmetic-operations
-go run main.go add 10 5
-go run main.go all 12 4
-```
-
-### 6. 出力練習サンプル (`examples/output-practice/`)
-```bash
-cd examples/output-practice
-go run main.go basic
-go run main.go all
 ```
 
 ## 📄 ライセンス
