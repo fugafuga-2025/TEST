@@ -74,24 +74,14 @@ TEST/
 
 ### 2. CLIツールサンプル (`examples/simple-cli/`)
 ```bash
-cd examples/simple-cli
-go run main.go hello 太郎
-go run main.go calc 10 20
-go run main.go info
+docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/simple-cli/main.go hello 太郎
+docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/simple-cli/main.go calc 10 20
+docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/simple-cli/main.go info
 ```
 
 ### 3. JSON処理サンプル (`examples/json-parser/`)
 ```bash
-cd examples/json-parser
-go run main.go
-```
-
-### 4. ミドルウェアデモ (`examples/middleware-demo/`)
-```bash
-cd examples/middleware-demo
-go run main.go
-# 認証が必要なエンドポイントをテスト
-curl -H "Authorization: Bearer demo-token" http://localhost:8080/api/v1/users
+docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/json-parser/main.go
 ```
 
 ## 📄 ライセンス
