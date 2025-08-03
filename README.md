@@ -73,15 +73,31 @@ TEST/
 - ヘルスチェック機能
 
 ### 2. CLIツールサンプル (`examples/simple-cli/`)
-```bash
+以下は、Mac用とWindows用の `docker run` コマンドをマークダウン形式で整理したコードブロックです。用途別に見やすく整えています。
+
+ 🖥️ **Mac用コマンド**
+```sh
 docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/simple-cli/main.go hello 太郎
 docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/simple-cli/main.go calc 10 20
 docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/simple-cli/main.go info
 ```
+🪟 **Windows用コマンド（コマンドプロンプト）**
+
+```cmd
+docker run --rm -v %cd%:/app -w /app golang:1.21-alpine go run examples/simple-cli/main.go hello 太郎
+docker run --rm -v %cd%:/app -w /app golang:1.21-alpine go run examples/simple-cli/main.go calc 10 20
+docker run --rm -v %cd%:/app -w /app golang:1.21-alpine go run examples/simple-cli/main.go info
+```
 
 ### 3. JSON処理サンプル (`examples/json-parser/`)
-```bash
+ 🖥️ **Mac用コマンド**
+```
 docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/json-parser/main.go
+```
+🪟 **Windows用コマンド（コマンドプロンプト）**
+
+```cmd
+docker run --rm -v %cd%:/app -w /app golang:1.21-alpine go run examples/json-parser/main.go
 ```
 
 ## 📄 ライセンス

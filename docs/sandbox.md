@@ -41,6 +41,8 @@ func main() {
 
 ```bash
 docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/test/main.go
+#windowsは下記で実行
+docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/test/main.go
 ```
 
 これで `Hello, World!` が表示されれば成功です！
