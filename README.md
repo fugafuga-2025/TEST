@@ -90,10 +90,8 @@ docker run --rm -v %cd%:/app -w /app golang:1.21-alpine go run examples/simple-c
 ```
 
 ### 3. JSON処理サンプル (`examples/json-parser/`)
-
-```
  🖥️ **Mac用コマンド**
-```sh
+```
 docker run --rm -v $(pwd):/app -w /app golang:1.21-alpine go run examples/json-parser/main.go
 ```
 🪟 **Windows用コマンド（コマンドプロンプト）**
